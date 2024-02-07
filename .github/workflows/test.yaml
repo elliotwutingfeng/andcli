@@ -24,5 +24,4 @@ jobs:
         cache: true
     - name: test
       run: |
-        go test -v -coverprofile codecov.out ./... && \
-        go tool cover -func codecov.out
+        go test -v -coverprofile codecov.out ./... && go tool cover -func codecov.out
