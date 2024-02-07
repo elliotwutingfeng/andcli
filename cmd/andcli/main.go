@@ -6,6 +6,7 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+	"syscall"
 
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/fatih/color"
@@ -129,7 +130,7 @@ func decrypt(vaultFile, vaultType string, p ...[]byte) (entries, error) {
 		pass = p[0]
 	}
 
-	fd := int(os.Stdin.Fd())
+	fd := syscall.Stdin
 	if term.IsTerminal(fd) {
 		fmt.Print("Enter password: ")
 		pass, err = term.ReadPassword(fd)
