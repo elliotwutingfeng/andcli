@@ -13,6 +13,9 @@ View, decrypt and copy 2FA tokens from encrypted backup files directly in your s
 
 Download a [prebuild release](https://github.com/tjblackheart/andcli/releases) and place it somewhere in your $PATH. If you have Go installed you can build it yourself: `go install -v github.com/tjblackheart/andcli/cmd/andcli@latest`.
 
+> [!NOTE]
+> On Linux you will need to install development headers for the X11 client-side library. For Ubuntu, you can run `sudo apt install libx11-dev`.
+
 ## Usage
 
 1. Export an **encrypted, password protected** backup from your 2FA app and save it into your preferred cloud provider (i.e. Dropbox, Nextcloud...).
